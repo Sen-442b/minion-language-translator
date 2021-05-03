@@ -11,10 +11,13 @@ alert(welcome_message);
 **/
 var button_translate = document.querySelector("#btn-translate");
 var input_textarea = document.querySelector("#txt-input");
+var output_div = document.querySelector("#output");
 // Declaring Variables Before initializing function is a good practice
 function clickEventHandler(){
-    console.log("clicked");
-    console.log("The input is ",input_textarea.value);
+    // console.log("clicked");
+    // console.log("The input is ",input_textarea.value);
+output_div.innerHTML= "translated " + input_textarea.value;
+
 }
 
 button_translate.addEventListener("click" ,clickEventHandler);
