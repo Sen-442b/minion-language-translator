@@ -16,7 +16,7 @@ var output_div = document.querySelector("#output");
 function clickEventHandler(){
     // console.log("clicked");
     // console.log("The input is ",input_textarea.value);
-output_div.innerHTML= "translated " + input_textarea.value;
+output_div.innerText= "translated" + input_textarea.value;
 
 }
 
