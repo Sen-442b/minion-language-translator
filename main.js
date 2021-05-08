@@ -1,3 +1,4 @@
+
 /** 
 //input 
 var user_name = prompt("Enter your username");
@@ -13,24 +14,25 @@ var button_translate = document.querySelector("#btn-translate");
 var input_textarea = document.querySelector("#txt-input");
 var output_div = document.querySelector("#output");
 // var encoded_server_URL = encodeURI("https://lessonfourapi.tanaypratap.repl.co/translate/yoda.json")
-var encoded_server_URL = encodeURI("https://api.funtranslations.com/translate/yoda.json")
+var encoded_server_URL = encodeURI("https://api.funtranslations.com/translate/minion.json")
 
 
 // Declaring Variables Before initializing function is a good practice
-function getTranslationURL(text){
- var request = encoded_server_URL + "?" + "text="+ text
+function getTranslationURL(value){
+ var request = encoded_server_URL + "?" + "text="+ value
   return request 
 }
 
 function errorHandler() {
-  alert("server is not working,  try again later")
+  alert("server is not working, please try again later")
 
 }
 function clickEventHandler(){
-  
+  /**
     // console.log("clicked");
     // console.log("The input is ",input_textarea.value);
 //output_div.innerText= "translated " + input_textarea.value
+ */
 var inputText = input_textarea.value //taking input
 
 //calling server for processing 
@@ -38,7 +40,7 @@ fetch(getTranslationURL(inputText))
 .then(response => response.json())
 .then(json => {
    var translated_text = json.contents.translated 
-  output_div.innerText = translated_text
+  output_div.innerText = translated_text //output
 })
 .catch(errorHandler)//error handling 
 
@@ -73,3 +75,4 @@ fetch("https://lessonfourapi.tanaypratap.repl.co/translate/yoda.json?text=work p
  
 
 **/
+
