@@ -1,30 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Translator App</title>
-    <link rel="stylesheet" href="style.css">
-</head> 
- <!--
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <!--
      script insertion method :1
  <script>
 
  </script>
 -->
-<body>
-<h1> Talking Banana</h1>   
+  <body>
+    <nav class="nav-bar"></nav>
+    <br>
+    <h1>Talking Banana</h1>
+    <br>
+    <div class="main-content">
+      <textarea name="translator" id="txt-input" cols="40" rows="10"></textarea>
+      <br>
+      <button id="btn-translate">Translate</button>
 
-<textarea name="translator" id="txt-input" cols="40" rows="10"></textarea>
-<button  id="btn-translate">
-    Translate
-</button> 
-
-<div>Output will come here  👇</div>
-<div id="output"></div>
-
-<!--HTML IS READ TOP TO BOTTOm-->
+      <div>Output will come here 👇</div>
+      <div id="output"></div>
+    </div>
+    <!--HTML FOLLOWS TOP TO BOTTOM APPROACH-->
     <script type="text/javascript" src="main.js"></script>
-</body>
+  </body>
 </html>

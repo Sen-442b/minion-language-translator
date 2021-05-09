@@ -1,0 +1,22 @@
+:root{
+--primary-color: #f5E050;
+}
+
+
+.body{
+    margin: 0px;
+}
+
+.nav-bar {
+  background-color: var(--primary-color);
+  padding: 100px;
+  border-radius: 2rem;
+}
+
+.main-content {
+  display: block;
+max-width: 600px;
+margin: auto;
+
+}
+
