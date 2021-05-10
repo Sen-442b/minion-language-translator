@@ -1,22 +1,24 @@
 :root{
 --primary-color: #f5E050;
+--width-break:600px;
 }
 
 
 .body{
-    margin: 0px;
+    margin: 0;
 }
 
 .nav-bar {
+
   background-color: var(--primary-color);
   padding: 100px;
   border-radius: 2rem;
 }
 
 .main-content {
-  display: block;
-max-width: 600px;
 margin: auto;
+max-width: var(--width-break) ;
+padding: 1rem;
 
 }
 
