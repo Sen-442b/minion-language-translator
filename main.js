@@ -9,6 +9,7 @@ var welcome_message = `Welcome here  ${user_name}`;
 //output
 alert(welcome_message);
 **/
+
 var button_translate = document.querySelector("#btn-translate");
 var input_textarea = document.querySelector("#txt-input");
 var output_div = document.querySelector("#output");
@@ -16,6 +17,7 @@ var output_div = document.querySelector("#output");
 var encoded_server_URL = encodeURI(
   "https://api.funtranslations.com/translate/minion.json"
 );
+let tts = new SpeechSynthesisUtterance(); //inbuilt Web Speech API
 
 // Declaring Variables Before initializing function is a good practice
 function getTranslationURL(value) {
@@ -42,6 +44,15 @@ function clickEventHandler() {
       output_div.innerText = translated_text; //output
     })
     .catch(errorHandler); //error handling
+
+    
+  //text to speech
+  let voices = []
+  tts.lang = "en";
+  tts.text = translated_text
+  tts.voice=voices[0];
+  
+  window.speechSynthesis.speak(tts);
 }
 
 button_translate.addEventListener("click", clickEventHandler);
