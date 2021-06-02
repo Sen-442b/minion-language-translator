@@ -21,9 +21,11 @@ body {
   background-color: var(--primary-color);
 
   padding: 40px;
-
+display: block;
   text-align: center;
   border-radius: 1rem;
+  margin: 0;
+  
 }
 nav .nav-text {
   font-size: 2rem;
@@ -75,7 +77,8 @@ padding: 1rem;
 text-align: center;
 border-radius: 1rem;
 justify-content: center;
-z-index: +1;
+
+
 }
 
 .ftr-about p {
@@ -84,12 +87,7 @@ z-index: +1;
 }
 
 .minion{
-  width: 500px;
-  max-height: 500px;
- position: absolute;
- z-index: -1;
- margin-right: 0px;
- margin-left: 66rem;
+  max-width: 500px;
 
 }
 .credits{
