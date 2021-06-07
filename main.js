@@ -49,8 +49,9 @@ function clickEventHandler() {
   //text to speech
   let voices = []
   tts.lang = "en";
-  tts.text = translated_text
+  tts.text =  output_div
   tts.voice=voices[0];
+  console.log(voices)
   
   window.speechSynthesis.speak(tts);
 }
