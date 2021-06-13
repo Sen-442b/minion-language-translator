@@ -11,13 +11,14 @@ alert(welcome_message);
 **/
 
 var button_translate = document.querySelector("#btn-translate");
+var button_speak = document.getElementById('btn-speak')
 var input_textarea = document.querySelector("#txt-input");
 var output_div = document.querySelector("#output");
 // var encoded_server_URL = encodeURI("https://lessonfourapi.tanaypratap.repl.co/translate/yoda.json")
 var encoded_server_URL = encodeURI(
   "https://api.funtranslations.com/translate/minion.json"
 );
-let tts = new SpeechSynthesisUtterance(); //inbuilt Web Speech API
+//inbuilt Web Speech API
 
 // Declaring Variables Before initializing function is a good practice
 function getTranslationURL(value) {
@@ -46,17 +47,40 @@ function clickEventHandler() {
     .catch(errorHandler); //error handling
 
     
-  //text to speech
-  let voices = []
-  tts.lang = "en";
-  tts.text =  output_div
-  tts.voice=voices[0];
-  console.log(voices)
-  
-  window.speechSynthesis.speak(tts);
+
+
+
 }
 
+
 button_translate.addEventListener("click", clickEventHandler);
+
+button_speak.addEventListener("click", ()=>{
+  let tts = new SpeechSynthesisUtterance(); 
+
+  //text to speech
+  
+  let voices = []
+  tts.lang = "en-US"
+  tts.text = output_div.innerText
+  tts.voice=voices[0];
+  tts.rate =1;
+  tts.volume = 1;
+  tts.pitch = 0.2 ;
+  window.speechSynthesis.speak(tts);
+ })
+
+
+
+
+
+
+
+
+
+
+
+
 
 /** 
 
