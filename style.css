@@ -91,12 +91,7 @@ justify-content: center;
   max-width: 500px;
 
 }
-.credits{
-  margin: auto;
- max-width: var(--width-break);
- 
 
-}
 a{
   
   text-decoration: none;
