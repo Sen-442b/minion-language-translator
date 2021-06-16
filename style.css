@@ -22,7 +22,7 @@ body {
   background-color: var(--primary-color);
 
   padding: 40px;
-display: block;
+
   text-align: center;
   border-radius: 1rem;
   margin: 0;
@@ -35,7 +35,7 @@ nav .nav-text {
 }
 
 .main-content {
-  margin: auto;
+  margin: 0 auto;
   max-width: var(--width-break);
   padding: 2rem;
 }
